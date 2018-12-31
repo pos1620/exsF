@@ -58,12 +58,8 @@ namespace Inicial
 //	l1.loopwhile(3);
 //	loop.loopdo(3);
 	l1.recursiva(1);
+	l1.tabuada(1);
 		Console.ReadKey(true);
 		}//fim main
-	
-
-
-
 	}//fim clsdde
-
 }//fim namespace

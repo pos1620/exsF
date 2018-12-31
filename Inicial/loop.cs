@@ -52,5 +52,14 @@ namespace Inicial
 		}
 		}
 		
+		
+		public void tabuada(byte x,byte tab=1){
+			Console.WriteLine(x+"(x)*(tab)"+tab+"="+(x*tab));
+			if(tab<10)
+				tabuada(x,++tab);
+		}
+		
+		
+		
 	}//fim classe
 }//fim namespace
