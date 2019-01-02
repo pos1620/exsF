@@ -8,7 +8,7 @@
  */
 using System;
 
-namespace Inicial.people
+namespace people
 {
 	/// <summary>
 	/// Description of pessoa.
