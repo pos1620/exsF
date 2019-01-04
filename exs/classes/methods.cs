@@ -22,7 +22,12 @@ namespace exs.classes
 			set{nome=value;}
 		}
 	
-		
+		public string tipo;
+		public string Tipo{
+			get{return tipo;}
+			set{nome=value;}
+		 
+			
 		public static string caminho(){
 			return ConfigurationManager.AppSettings["db"];
 		}

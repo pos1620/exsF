@@ -15,16 +15,21 @@ namespace exs
 	{
 		public static void Main(string[] args)
 		{
+			pessoa p = new pessoa{
+			nome="pokemon",
+			};
+			
 			pessoa p1 = new pessoa();
 			p1.Nome="Brunna pedroza";
 			produto pr = new produto();
 			pr.Nome="shampoo";
-			//pr.="cosmetico";
+			pr.Tipo="cosmetico";
 			
 			
 			
 			Console.WriteLine("Welcome to world map "+p1.Nome);
 			//Console.WriteLine("vc esta comprando "+pr.Nome+" do tipo:"+pr.Tipo);
+			p1.gravar();
 			p1.gravar();
 			pr.gravar();
 			Console.ReadKey(true);
