@@ -15,6 +15,7 @@ namespace exs.classes
 	/// </summary>
 	public class produto:methods
 	{
+		/*
 		public string nome;
 		public string Nome{
 			get{return nome;}
@@ -26,5 +27,6 @@ namespace exs.classes
 			get{return tipo;}
 			set{nome=value;}
 		}
+		*/
 	}
 }

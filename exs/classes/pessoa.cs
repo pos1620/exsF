@@ -15,12 +15,7 @@ namespace exs.classes
 	/// </summary>
 	public class pessoa:methods
 	{
-		public string nome;
-		public string Nome{
-			get{return nome;}
-			set{nome=value;}
-		}
-	
+		
 	
 	}
 }//fim namespace
