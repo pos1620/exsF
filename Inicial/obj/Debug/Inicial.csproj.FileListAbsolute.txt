@@ -1,6 +1,0 @@
-C:\Users\home\Documents\SharpDevelop Projects\Inicial\Inicial\bin\Debug\Inicial.exe.config
-C:\Users\home\Documents\SharpDevelop Projects\Inicial\Inicial\bin\Debug\Inicial.exe
-C:\Users\home\Documents\SharpDevelop Projects\Inicial\Inicial\bin\Debug\Inicial.pdb
-C:\Users\home\Documents\SharpDevelop Projects\Inicial\Inicial\obj\Debug\Inicial.csprojResolveAssemblyReference.cache
-C:\Users\home\Documents\SharpDevelop Projects\Inicial\Inicial\obj\Debug\Inicial.exe
-C:\Users\home\Documents\SharpDevelop Projects\Inicial\Inicial\obj\Debug\Inicial.pdb

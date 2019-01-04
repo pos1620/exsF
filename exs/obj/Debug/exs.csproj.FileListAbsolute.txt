@@ -1,0 +1,6 @@
+C:\Users\home\Documents\SharpDevelop Projects\exs\exs\obj\Debug\exs.csprojResolveAssemblyReference.cache
+C:\Users\home\Documents\SharpDevelop Projects\exs\exs\bin\Debug\exs.exe.config
+C:\Users\home\Documents\SharpDevelop Projects\exs\exs\bin\Debug\exs.exe
+C:\Users\home\Documents\SharpDevelop Projects\exs\exs\bin\Debug\exs.pdb
+C:\Users\home\Documents\SharpDevelop Projects\exs\exs\obj\Debug\exs.exe
+C:\Users\home\Documents\SharpDevelop Projects\exs\exs\obj\Debug\exs.pdb
