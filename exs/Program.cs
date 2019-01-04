@@ -28,10 +28,12 @@ namespace exs
 			
 			
 			Console.WriteLine("Welcome to world map "+p1.Nome);
+			//Console.WriteLine("Welcome to world map "+p1.GetType());
+			//Console.WriteLine("Welcome to world map "+typeof(pessoa));
 			//Console.WriteLine("vc esta comprando "+pr.Nome+" do tipo:"+pr.Tipo);
-			p1.gravar();
-			p1.gravar();
-			pr.gravar();
+			//p1.gravar();
+			//p.gravar();
+			//pr.gravar();
 			Console.ReadKey(true);
 		}
 		

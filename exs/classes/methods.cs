@@ -26,7 +26,7 @@ namespace exs.classes
 		public string Tipo{
 			get{return tipo;}
 			set{nome=value;}
-		 
+		}
 			
 		public static string caminho(){
 			return ConfigurationManager.AppSettings["db"];
