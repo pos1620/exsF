@@ -8,7 +8,7 @@
  */
 using System;
 using exs.classes;
-
+using mthds;
 namespace exs
 {
 	class Program
@@ -28,6 +28,9 @@ namespace exs
 			
 			
 			Console.WriteLine("Welcome to world map "+p1.Nome);
+			
+				UserControl1 mt = new UserControl1();			
+			mt.ass();
 			//Console.WriteLine("Welcome to world map "+p1.GetType());
 			//Console.WriteLine("Welcome to world map "+typeof(pessoa));
 			//Console.WriteLine("vc esta comprando "+pr.Nome+" do tipo:"+pr.Tipo);

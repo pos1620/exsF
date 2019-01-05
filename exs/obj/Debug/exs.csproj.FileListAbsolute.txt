@@ -4,3 +4,5 @@ C:\Users\home\Documents\SharpDevelop Projects\exs\exs\bin\Debug\exs.exe
 C:\Users\home\Documents\SharpDevelop Projects\exs\exs\bin\Debug\exs.pdb
 C:\Users\home\Documents\SharpDevelop Projects\exs\exs\obj\Debug\exs.exe
 C:\Users\home\Documents\SharpDevelop Projects\exs\exs\obj\Debug\exs.pdb
+C:\Users\home\Documents\SharpDevelop Projects\exs\exs\bin\Debug\mthds.dll
+C:\Users\home\Documents\SharpDevelop Projects\exs\exs\bin\Debug\mthds.pdb
