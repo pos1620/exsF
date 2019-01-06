@@ -34,10 +34,12 @@ namespace exsF
 		MessageBox.Show("Cadastrado!");
 			Valores v1 	= new Valores();
 			//v1.Preco=Convert.ToSingle(label6.Text);
-			v1.Preco=float.Parse(label6.Text);
-			//label6.Text=v1.CalcularPreco().ToString("N3", new CultureInfo("pt-BR"));
-			label6.Text=v1.CalcularPrecoServico().ToString("f2");
-	//		v1.HorasT=4;
+			//v1.Preco=float.Parse(resLABEL.Text);
+			//resLABEL.Text=v1.CalcularPrecoServico().ToString("f2");
+			valorLABEL.Text="valor="+v1.CalcularPrecoServico().ToString("f2");
+
+
+//		v1.HorasT=4;
 	//		v1.salarioHora=111;
 	//MessageBox.Show("salario de:"+v1.CalcularSalario().ToString("c2"));
 		//MessageBox.Show("salário de: "+string.Format("{0:n}",v1.CalcularSalario(999,4)));
@@ -51,8 +53,8 @@ namespace exsF
        {
 		MessageBox.Show("Cadastrado!");
 			Valores v1 	= new Valores();
-			v1.Preco=float.Parse(label6.Text);
-			label6.Text=v1.CalcularPrecoServico().ToString("f2");
+			//v1.Preco=float.Parse(resLABEL.Text);
+			valorLABEL.Text="valor="+v1.CalcularPrecoServico().ToString("f2");
 		}
 		
 		}

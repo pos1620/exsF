@@ -44,7 +44,11 @@ namespace exsF
 		}
 		void CadastrarToolStripMenuItemClick(object sender, EventArgs e)
 		{
-			new Cadastro().Show();
+	//		new Cadastro().Show();
+	var x=new Cadastro();
+	x.resLABEL.Text="Desenvolvido por alxsy mostovik";
+	x.Show();
+						
 		}
 		void SobreToolStripMenuItemClick(object sender, EventArgs e)
 		{

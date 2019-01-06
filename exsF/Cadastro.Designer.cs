@@ -14,15 +14,15 @@ namespace exsF
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label2;
+		public  System.Windows.Forms.Label resLABEL;
+		private System.Windows.Forms.Label valorLABEL;
+		private System.Windows.Forms.TextBox phoneTXT;
+		private System.Windows.Forms.TextBox emailTXT;
+		private System.Windows.Forms.TextBox nomeTXT;
+		private System.Windows.Forms.Button buttonGRAVAR;
+		private System.Windows.Forms.Label phoneLABEL;
+		private System.Windows.Forms.Label emailLABEL;
+		private System.Windows.Forms.Label nomeLABEL;
 		private System.Windows.Forms.Label label1;
 		
 		/// <summary>
@@ -46,89 +46,89 @@ namespace exsF
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label6 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
+			this.resLABEL = new System.Windows.Forms.Label();
+			this.valorLABEL = new System.Windows.Forms.Label();
+			this.phoneTXT = new System.Windows.Forms.TextBox();
+			this.emailTXT = new System.Windows.Forms.TextBox();
+			this.nomeTXT = new System.Windows.Forms.TextBox();
+			this.buttonGRAVAR = new System.Windows.Forms.Button();
+			this.phoneLABEL = new System.Windows.Forms.Label();
+			this.emailLABEL = new System.Windows.Forms.Label();
+			this.nomeLABEL = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
-			// label6
+			// resLABEL
 			// 
-			this.label6.Location = new System.Drawing.Point(206, 184);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(100, 23);
-			this.label6.TabIndex = 19;
-			this.label6.Text = "0";
+			this.resLABEL.Location = new System.Drawing.Point(12, 242);
+			this.resLABEL.Name = "resLABEL";
+			this.resLABEL.Size = new System.Drawing.Size(204, 22);
+			this.resLABEL.TabIndex = 19;
+			this.resLABEL.Text = "Engenheiro de Sist.";
 			// 
-			// label5
+			// valorLABEL
 			// 
-			this.label5.Location = new System.Drawing.Point(175, 184);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(100, 23);
-			this.label5.TabIndex = 18;
-			this.label5.Text = "valor=";
+			this.valorLABEL.Location = new System.Drawing.Point(111, 178);
+			this.valorLABEL.Name = "valorLABEL";
+			this.valorLABEL.Size = new System.Drawing.Size(135, 23);
+			this.valorLABEL.TabIndex = 18;
+			this.valorLABEL.Text = "valor=0";
 			// 
-			// textBox3
+			// phoneTXT
 			// 
-			this.textBox3.Location = new System.Drawing.Point(405, 109);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(100, 20);
-			this.textBox3.TabIndex = 17;
-			this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox3KeyPress);
+			this.phoneTXT.Location = new System.Drawing.Point(405, 109);
+			this.phoneTXT.Name = "phoneTXT";
+			this.phoneTXT.Size = new System.Drawing.Size(100, 20);
+			this.phoneTXT.TabIndex = 17;
+			this.phoneTXT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox3KeyPress);
 			// 
-			// textBox2
+			// emailTXT
 			// 
-			this.textBox2.Location = new System.Drawing.Point(246, 109);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(100, 20);
-			this.textBox2.TabIndex = 16;
+			this.emailTXT.Location = new System.Drawing.Point(246, 109);
+			this.emailTXT.Name = "emailTXT";
+			this.emailTXT.Size = new System.Drawing.Size(100, 20);
+			this.emailTXT.TabIndex = 16;
 			// 
-			// textBox1
+			// nomeTXT
 			// 
-			this.textBox1.Location = new System.Drawing.Point(100, 109);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(100, 20);
-			this.textBox1.TabIndex = 15;
+			this.nomeTXT.Location = new System.Drawing.Point(100, 109);
+			this.nomeTXT.Name = "nomeTXT";
+			this.nomeTXT.Size = new System.Drawing.Size(100, 20);
+			this.nomeTXT.TabIndex = 15;
 			// 
-			// button1
+			// buttonGRAVAR
 			// 
-			this.button1.Location = new System.Drawing.Point(292, 219);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(242, 23);
-			this.button1.TabIndex = 14;
-			this.button1.Text = "Gravar Dados";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.Button1Click);
+			this.buttonGRAVAR.Location = new System.Drawing.Point(292, 219);
+			this.buttonGRAVAR.Name = "buttonGRAVAR";
+			this.buttonGRAVAR.Size = new System.Drawing.Size(242, 23);
+			this.buttonGRAVAR.TabIndex = 14;
+			this.buttonGRAVAR.Text = "Gravar Dados";
+			this.buttonGRAVAR.UseVisualStyleBackColor = true;
+			this.buttonGRAVAR.Click += new System.EventHandler(this.Button1Click);
 			// 
-			// label4
+			// phoneLABEL
 			// 
-			this.label4.Location = new System.Drawing.Point(352, 112);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(100, 23);
-			this.label4.TabIndex = 13;
-			this.label4.Text = "Telefone";
+			this.phoneLABEL.Location = new System.Drawing.Point(352, 112);
+			this.phoneLABEL.Name = "phoneLABEL";
+			this.phoneLABEL.Size = new System.Drawing.Size(100, 23);
+			this.phoneLABEL.TabIndex = 13;
+			this.phoneLABEL.Text = "Telefone";
 			// 
-			// label3
+			// emailLABEL
 			// 
-			this.label3.Location = new System.Drawing.Point(206, 112);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(100, 17);
-			this.label3.TabIndex = 12;
-			this.label3.Text = "Email";
+			this.emailLABEL.Location = new System.Drawing.Point(206, 112);
+			this.emailLABEL.Name = "emailLABEL";
+			this.emailLABEL.Size = new System.Drawing.Size(100, 17);
+			this.emailLABEL.TabIndex = 12;
+			this.emailLABEL.Text = "Email";
 			// 
-			// label2
+			// nomeLABEL
 			// 
-			this.label2.Location = new System.Drawing.Point(48, 112);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(100, 17);
-			this.label2.TabIndex = 11;
-			this.label2.Text = "Nome";
+			this.nomeLABEL.Location = new System.Drawing.Point(48, 112);
+			this.nomeLABEL.Name = "nomeLABEL";
+			this.nomeLABEL.Size = new System.Drawing.Size(100, 17);
+			this.nomeLABEL.TabIndex = 11;
+			this.nomeLABEL.Text = "Nome";
 			// 
 			// label1
 			// 
@@ -144,15 +144,15 @@ namespace exsF
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(583, 273);
-			this.Controls.Add(this.label6);
-			this.Controls.Add(this.label5);
-			this.Controls.Add(this.textBox3);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.textBox1);
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.label4);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.resLABEL);
+			this.Controls.Add(this.valorLABEL);
+			this.Controls.Add(this.phoneTXT);
+			this.Controls.Add(this.emailTXT);
+			this.Controls.Add(this.nomeTXT);
+			this.Controls.Add(this.buttonGRAVAR);
+			this.Controls.Add(this.phoneLABEL);
+			this.Controls.Add(this.emailLABEL);
+			this.Controls.Add(this.nomeLABEL);
 			this.Controls.Add(this.label1);
 			this.Name = "Cadastro";
 			this.Text = "Cadastro";
