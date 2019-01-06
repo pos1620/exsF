@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\email.cs" />
     <Compile Include="classes\methods.cs" />
     <Compile Include="classes\pessoa.cs" />
     <Compile Include="classes\produto.cs" />
