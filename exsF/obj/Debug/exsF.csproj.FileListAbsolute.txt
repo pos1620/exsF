@@ -1,0 +1,8 @@
+C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\bin\Debug\exsF.exe.config
+C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\bin\Debug\exsF.exe
+C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\bin\Debug\exsF.pdb
+C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.csprojResolveAssemblyReference.cache
+C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.MainForm.resources
+C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.csproj.GenerateResource.Cache
+C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.exe
+C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.pdb
