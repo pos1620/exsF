@@ -6,3 +6,5 @@ C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.MainForm.
 C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.csproj.GenerateResource.Cache
 C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.exe
 C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.pdb
+C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.Cadastro.resources
+C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.Sobre.resources
