@@ -38,5 +38,16 @@ namespace exsF
 			nomeLABEL.Text="Nome="+new Valores().Engineer;
 			MessageBox.Show("welcome "+v2.Nome);
 		}
+		void ConsultarFormClosing(object sender, FormClosingEventArgs e)
+		{
+		//	this.Close();
+			new MainForm().Show();
+		}
+		void ConsultarFormClosed(object sender, FormClosedEventArgs e)
+		{
+		//this.Close();
+			new MainForm().Show();
+		
+		}
 	}
 }//

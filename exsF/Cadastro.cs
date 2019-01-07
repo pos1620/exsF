@@ -68,9 +68,10 @@ public void sms(){
 		
 		
 		MainForm f1 = new MainForm();
-		f1.setNome(v1);
+		//f1.setNome(v1);
+		f1.QuemSou(v1);
 		MessageBox.Show(v1.Nome);
-		this.Close();
+		this.Hide();
 				f1.Show();
 
 }
@@ -91,6 +92,12 @@ public void sms(){
 		{
 			
 	
+		}
+		void CadastroFormClosing(object sender, FormClosingEventArgs e)
+		{
+		//this.Close();
+			new MainForm().Show();
+		
 		}
 	}//fim classe
 }//fim namesspace

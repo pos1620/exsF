@@ -18,7 +18,6 @@ namespace exsF
 	/// </summary>
 	public partial class MainForm : Form
 	{
-		Valores v1 = new Valores();
 			
 		public MainForm()
 		{
@@ -47,7 +46,6 @@ namespace exsF
 		}
 		void CadastrarToolStripMenuItemClick(object sender, EventArgs e)
 		{
-	//		new Cadastro().Show();
 	
 	var cad=new Cadastro();
 	cad.resLABEL.Text="Desenvolvido por "+new Valores().Engineer;
@@ -61,20 +59,27 @@ namespace exsF
 		new Sobre().Show();
 		
 		}
-		//Valores v1 = new Valores();
 
-		public void setNome(Valores v2){
-			this.v1=v2;
-		}
+			Valores v2= new Valores();
+		public Valores QuemSou(Valores ob){
+				v2 =ob;
+			return v2;
+}
+
+public Valores QuemSou3(){
+			return v2;
+}		
+		
 		
 		void ConsultarToolStripMenuItemClick(object sender, EventArgs e)
 		{
-			//v1.Nome;
-			//new Consultar(v1).Show();
-		//	new Consultar().Show();
-		Consultar c =  new Consultar(this.v1);
-		c.Show();
-		this.Close();
+		//new Consultar(QuemSou(v2)).Show();
+		new Consultar(QuemSou3()).Show();
+		this.Hide();
+		}
+		void MainFormFormClosing(object sender, FormClosingEventArgs e)
+		{
+			Application.Exit();
 		}
 		
 		

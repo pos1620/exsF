@@ -130,6 +130,7 @@ namespace exsF
 			this.Controls.Add(this.button1);
 			this.Name = "Consultar";
 			this.Text = "Consultar";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConsultarFormClosed);
 			this.Load += new System.EventHandler(this.ConsultarLoad);
 			this.ResumeLayout(false);
 
