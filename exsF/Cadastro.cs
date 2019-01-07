@@ -31,10 +31,30 @@ namespace exsF
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
+		sms();
+		}
+		void TextBox3KeyPress(object sender, KeyPressEventArgs e)
+		{
+		 if (e.KeyChar == (char)13)
+       {
+		
+		}
+		
+		}
+	
+//function
+public void sms(){
 		MessageBox.Show("Cadastrado!");
 			Valores v1 	= new Valores();
 			//v1.Preco=Convert.ToSingle(label6.Text);
-			//v1.Preco=float.Parse(resLABEL.Text);
+			v1.Nome=nomeTXT.Text;
+			v1.Email=emailTXT.Text;
+			v1.Phone=phoneTXT.Text;
+			v1.Url=urlTXT.Text;
+			v1.TipoProduto=tipoTXT.Text;
+			v1.Preco=float.Parse(precoTXT.Text);
+			
+			
 			//resLABEL.Text=v1.CalcularPrecoServico().ToString("f2");
 			valorLABEL.Text="valor="+v1.CalcularPrecoServico().ToString("f2");
 
@@ -46,17 +66,27 @@ namespace exsF
 		//MessageBox.Show("salário de: "+string.Format("%2f",v1.CalcularSalario(999,4)));
 		//System.Diagnostics.Debug.WriteLine("salário de: "+String.Format("%.2f",v1.CalcularSalario(999,4)));
 		
-		}
-		void TextBox3KeyPress(object sender, KeyPressEventArgs e)
+		
+		MainForm f1 = new MainForm();
+		f1.nome(v1);
+}
+//end function
+		void PrecoTXTKeyPress(object sender, KeyPressEventArgs e)
 		{
 		 if (e.KeyChar == (char)13)
        {
-		MessageBox.Show("Cadastrado!");
-			Valores v1 	= new Valores();
-			//v1.Preco=float.Parse(resLABEL.Text);
-			valorLABEL.Text="valor="+v1.CalcularPrecoServico().ToString("f2");
+		sms();
 		}
-		
 		}
-	}
+		void PrecoTXTClick(object sender, EventArgs e)
+		{
+			
+			precoTXT.Clear();
 }
+		void CadastroLoad(object sender, EventArgs e)
+		{
+			
+	
+		}
+	}//fim classe
+}//fim namesspace

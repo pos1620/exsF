@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using exsF.mthds;
 namespace exsF
 {
 	/// <summary>
@@ -45,15 +46,26 @@ namespace exsF
 		void CadastrarToolStripMenuItemClick(object sender, EventArgs e)
 		{
 	//		new Cadastro().Show();
-	var x=new Cadastro();
-	x.resLABEL.Text="Desenvolvido por alxsy mostovik";
-	x.Show();
+	
+	var cad=new Cadastro();
+	cad.resLABEL.Text="Desenvolvido por "+new Valores().Engineer;
+	cad.precoTXT.Text="0";
+	cad.Show();
 						
 		}
 		void SobreToolStripMenuItemClick(object sender, EventArgs e)
 		{
 		new Sobre().Show();
 		
+		}
+		Valores v1 = new Valores();
+		public Object nome(Valores v1){
+			return v1;
+		}
+		void ConsultarToolStripMenuItemClick(object sender, EventArgs e)
+		{
+		//	new Consultar().Show();
+		new Consultar().Show();
 		}
 		
 		

@@ -24,6 +24,12 @@ namespace exsF
 		private System.Windows.Forms.Label emailLABEL;
 		private System.Windows.Forms.Label nomeLABEL;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label urlLABEL;
+		private System.Windows.Forms.TextBox urlTXT;
+		private System.Windows.Forms.Label tipoLABEL;
+		private System.Windows.Forms.TextBox tipoTXT;
+		private System.Windows.Forms.Label precoLABEL;
+		public  System.Windows.Forms.TextBox precoTXT;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -56,6 +62,12 @@ namespace exsF
 			this.emailLABEL = new System.Windows.Forms.Label();
 			this.nomeLABEL = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
+			this.urlLABEL = new System.Windows.Forms.Label();
+			this.urlTXT = new System.Windows.Forms.TextBox();
+			this.tipoLABEL = new System.Windows.Forms.Label();
+			this.tipoTXT = new System.Windows.Forms.TextBox();
+			this.precoLABEL = new System.Windows.Forms.Label();
+			this.precoTXT = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// resLABEL
@@ -91,9 +103,9 @@ namespace exsF
 			// 
 			// nomeTXT
 			// 
-			this.nomeTXT.Location = new System.Drawing.Point(100, 109);
+			this.nomeTXT.Location = new System.Drawing.Point(76, 109);
 			this.nomeTXT.Name = "nomeTXT";
-			this.nomeTXT.Size = new System.Drawing.Size(100, 20);
+			this.nomeTXT.Size = new System.Drawing.Size(124, 20);
 			this.nomeTXT.TabIndex = 15;
 			// 
 			// buttonGRAVAR
@@ -124,7 +136,7 @@ namespace exsF
 			// 
 			// nomeLABEL
 			// 
-			this.nomeLABEL.Location = new System.Drawing.Point(48, 112);
+			this.nomeLABEL.Location = new System.Drawing.Point(36, 112);
 			this.nomeLABEL.Name = "nomeLABEL";
 			this.nomeLABEL.Size = new System.Drawing.Size(100, 17);
 			this.nomeLABEL.TabIndex = 11;
@@ -139,11 +151,64 @@ namespace exsF
 			this.label1.TabIndex = 10;
 			this.label1.Text = "exs";
 			// 
+			// urlLABEL
+			// 
+			this.urlLABEL.Location = new System.Drawing.Point(36, 138);
+			this.urlLABEL.Name = "urlLABEL";
+			this.urlLABEL.Size = new System.Drawing.Size(100, 23);
+			this.urlLABEL.TabIndex = 20;
+			this.urlLABEL.Text = "Url";
+			// 
+			// urlTXT
+			// 
+			this.urlTXT.Location = new System.Drawing.Point(76, 135);
+			this.urlTXT.Name = "urlTXT";
+			this.urlTXT.Size = new System.Drawing.Size(124, 20);
+			this.urlTXT.TabIndex = 21;
+			// 
+			// tipoLABEL
+			// 
+			this.tipoLABEL.Location = new System.Drawing.Point(206, 135);
+			this.tipoLABEL.Name = "tipoLABEL";
+			this.tipoLABEL.Size = new System.Drawing.Size(100, 23);
+			this.tipoLABEL.TabIndex = 22;
+			this.tipoLABEL.Text = "Tipo";
+			// 
+			// tipoTXT
+			// 
+			this.tipoTXT.Location = new System.Drawing.Point(246, 138);
+			this.tipoTXT.Name = "tipoTXT";
+			this.tipoTXT.Size = new System.Drawing.Size(100, 20);
+			this.tipoTXT.TabIndex = 23;
+			// 
+			// precoLABEL
+			// 
+			this.precoLABEL.Location = new System.Drawing.Point(352, 135);
+			this.precoLABEL.Name = "precoLABEL";
+			this.precoLABEL.Size = new System.Drawing.Size(100, 23);
+			this.precoLABEL.TabIndex = 24;
+			this.precoLABEL.Text = "Preço";
+			// 
+			// precoTXT
+			// 
+			this.precoTXT.Location = new System.Drawing.Point(405, 138);
+			this.precoTXT.Name = "precoTXT";
+			this.precoTXT.Size = new System.Drawing.Size(100, 20);
+			this.precoTXT.TabIndex = 25;
+			this.precoTXT.Click += new System.EventHandler(this.PrecoTXTClick);
+			this.precoTXT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecoTXTKeyPress);
+			// 
 			// Cadastro
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(583, 273);
+			this.Controls.Add(this.precoTXT);
+			this.Controls.Add(this.precoLABEL);
+			this.Controls.Add(this.tipoTXT);
+			this.Controls.Add(this.tipoLABEL);
+			this.Controls.Add(this.urlTXT);
+			this.Controls.Add(this.urlLABEL);
 			this.Controls.Add(this.resLABEL);
 			this.Controls.Add(this.valorLABEL);
 			this.Controls.Add(this.phoneTXT);
@@ -156,9 +221,11 @@ namespace exsF
 			this.Controls.Add(this.label1);
 			this.Name = "Cadastro";
 			this.Text = "Cadastro";
+			this.Load += new System.EventHandler(this.CadastroLoad);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
 		}
-	}
-}
+		}//fim classe
+	}//fim namespace
+

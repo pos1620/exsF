@@ -20,6 +20,39 @@ namespace exsF.mthds
 		}
 		
 		
+		public string engineer="alxsy mostovik";
+		public string Engineer{
+			get{return engineer;}
+		}
+		public string nome;
+		public string Nome{
+			get{return nome;}
+			set{nome=value;}
+		}
+		
+		public string url;
+		public string Url{
+			get{return url;}
+			set{url=value;}
+		}
+		
+		public string tipoProduto;
+		public string TipoProduto{
+			get{return tipoProduto;}
+			set{tipoProduto=value;}
+		}
+		
+		public string phone;
+		public string Phone{
+			get{return phone;}
+			set{phone=value;}
+		}
+		
+		public string email;
+		public string Email{
+			get{return email;}
+			set{email=value;}
+		}
 		
 		public byte horasT=0;
 		public byte HorasT{
