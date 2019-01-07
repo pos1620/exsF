@@ -68,7 +68,11 @@ public void sms(){
 		
 		
 		MainForm f1 = new MainForm();
-		f1.nome(v1);
+		f1.setNome(v1);
+		MessageBox.Show(v1.Nome);
+		this.Close();
+				f1.Show();
+
 }
 //end function
 		void PrecoTXTKeyPress(object sender, KeyPressEventArgs e)

@@ -18,26 +18,16 @@ namespace exsF
 	/// </summary>
 	public partial class Consultar : Form
 	{
-		public Consultar(Valores v1)
-		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
-			InitializeComponent();
-			MessageBox.Show("welcome "+v1.Nome);
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
-		}
+		Valores v2 = new Valores();
+			
 		public Consultar()
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
+		}
+		public Consultar(Valores v1)
+		{
+			InitializeComponent();
+			v2=v1;
 		}
 		void ConsultarLoad(object sender, EventArgs e)
 		{
@@ -46,6 +36,7 @@ namespace exsF
 		void Button1Click(object sender, EventArgs e)
 		{
 			nomeLABEL.Text="Nome="+new Valores().Engineer;
+			MessageBox.Show("welcome "+v2.Nome);
 		}
 	}
-}
+}//

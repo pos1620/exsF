@@ -18,6 +18,8 @@ namespace exsF
 	/// </summary>
 	public partial class MainForm : Form
 	{
+		Valores v1 = new Valores();
+			
 		public MainForm()
 		{
 			//
@@ -50,22 +52,29 @@ namespace exsF
 	var cad=new Cadastro();
 	cad.resLABEL.Text="Desenvolvido por "+new Valores().Engineer;
 	cad.precoTXT.Text="0";
+	this.Hide();
 	cad.Show();
-						
+							
 		}
 		void SobreToolStripMenuItemClick(object sender, EventArgs e)
 		{
 		new Sobre().Show();
 		
 		}
-		Valores v1 = new Valores();
-		public Object nome(Valores v1){
-			return v1;
+		//Valores v1 = new Valores();
+
+		public void setNome(Valores v2){
+			this.v1=v2;
 		}
+		
 		void ConsultarToolStripMenuItemClick(object sender, EventArgs e)
 		{
+			//v1.Nome;
+			//new Consultar(v1).Show();
 		//	new Consultar().Show();
-		new Consultar().Show();
+		Consultar c =  new Consultar(this.v1);
+		c.Show();
+		this.Close();
 		}
 		
 		
