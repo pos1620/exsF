@@ -22,20 +22,11 @@ namespace exsF
 			
 		public MainForm()
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
 			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
 		}
 		public MainForm(Valores v1)
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
 			v2=v1;
 		
@@ -56,7 +47,7 @@ namespace exsF
 		}
 		void CadastrarToolStripMenuItemClick(object sender, EventArgs e)
 		{
-	
+
 	var cad=new Cadastro(v2);
 	cad.resLABEL.Text="Desenvolvido por "+new Valores().Engineer;
 	cad.precoTXT.Text="0";
@@ -66,26 +57,19 @@ namespace exsF
  //if(this.IsDisposed)
         //cad.Close();							
 		}
+		
 		void SobreToolStripMenuItemClick(object sender, EventArgs e)
 		{
 		new Sobre().ShowDialog();
-		
+			
 		}
 
-		public Valores QuemSou(Valores ob){
-				v2 =ob;
-			return v2;
-}
 
-public Valores QuemSou3(){
-			return v2;
-}		
-	
-	
+
 		void ConsultarToolStripMenuItemClick(object sender, EventArgs e)
 		{
 	
-		new Consultar(QuemSou3()).Show();;
+		new Consultar(v2).Show();;
 		//this.Hide();
 		//this.Close();
 		}
