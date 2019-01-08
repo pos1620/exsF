@@ -221,7 +221,7 @@ namespace exsF
 			this.Controls.Add(this.label1);
 			this.Name = "Cadastro";
 			this.Text = "Cadastro";
-			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastroFormClosing);
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CadastroFormClosed);
 			this.Load += new System.EventHandler(this.CadastroLoad);
 			this.ResumeLayout(false);
 			this.PerformLayout();

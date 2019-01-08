@@ -18,6 +18,7 @@ namespace exsF
 	/// </summary>
 	public partial class MainForm : Form
 	{
+			Valores v2= new Valores();
 			
 		public MainForm()
 		{
@@ -29,6 +30,15 @@ namespace exsF
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+		}
+		public MainForm(Valores v1)
+		{
+			//
+			// The InitializeComponent() call is required for Windows Forms designer support.
+			//
+			InitializeComponent();
+			v2=v1;
+		
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
@@ -47,20 +57,21 @@ namespace exsF
 		void CadastrarToolStripMenuItemClick(object sender, EventArgs e)
 		{
 	
-	var cad=new Cadastro();
+	var cad=new Cadastro(v2);
 	cad.resLABEL.Text="Desenvolvido por "+new Valores().Engineer;
 	cad.precoTXT.Text="0";
-	this.Hide();
 	cad.Show();
-							
+	//cad.ShowDialog();
+	//this.Hide();
+ //if(this.IsDisposed)
+        //cad.Close();							
 		}
 		void SobreToolStripMenuItemClick(object sender, EventArgs e)
 		{
-		new Sobre().Show();
+		new Sobre().ShowDialog();
 		
 		}
 
-			Valores v2= new Valores();
 		public Valores QuemSou(Valores ob){
 				v2 =ob;
 			return v2;
@@ -69,15 +80,48 @@ namespace exsF
 public Valores QuemSou3(){
 			return v2;
 }		
-		
-		
+	
+	
 		void ConsultarToolStripMenuItemClick(object sender, EventArgs e)
 		{
-		//new Consultar(QuemSou(v2)).Show();
-		new Consultar(QuemSou3()).Show();
-		this.Hide();
+	
+		new Consultar(QuemSou3()).Show();;
+		//this.Hide();
+		//this.Close();
 		}
 		void MainFormFormClosing(object sender, FormClosingEventArgs e)
+		{
+		//	Application.Exit();
+		this.Close();
+		
+		}
+		
+		
+				
+		
+		public void OperationWinwdow(Object ob,string op){
+			if(Application.OpenForms.Count==0){
+				Application.Exit();
+			}
+			else{
+				foreach(Form formA in Application.OpenForms)
+					if(formA is Object && op.Equals("retomar")){
+						formA.Show();
+						//formA.Hide();
+						//new MainForm(ob2).Show();
+						//formA.Close();
+				break;
+				}
+				else if(formA is Object && op.Equals("fechar")){
+						formA.Close();
+				break;
+				
+				}
+				
+			}
+		}
+		
+		void MainFormFormClosed(object sender, FormClosedEventArgs e)
 		{
 			Application.Exit();
 		}

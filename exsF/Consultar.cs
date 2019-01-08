@@ -41,12 +41,15 @@ namespace exsF
 		void ConsultarFormClosing(object sender, FormClosingEventArgs e)
 		{
 		//	this.Close();
-			new MainForm().Show();
+		
+			MainForm m = new MainForm();
+//			m.OperationWinwdow(m,"retomar");
 		}
 		void ConsultarFormClosed(object sender, FormClosedEventArgs e)
 		{
-		//this.Close();
-			new MainForm().Show();
+			
+		//	MainForm m = new MainForm();
+		//	m.OperationWinwdow(m,"retomar");
 		
 		}
 	}

@@ -7,7 +7,6 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-
 namespace exsF.mthds
 {
 	/// <summary>
@@ -89,5 +88,8 @@ namespace exsF.mthds
 	public float CalcularSalario(){
 		return HorasT*SalarioHora;
 	}
+	
+	
+	
 	}//fim classe
 }//fim namespace

@@ -10,7 +10,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using exsF.mthds;
-
+using System.IO;
 namespace exsF
 {
 	/// <summary>
@@ -18,6 +18,8 @@ namespace exsF
 	/// </summary>
 	public partial class Cadastro : Form
 	{
+Valores v1 	= new Valores();
+		
 		public Cadastro()
 		{
 			//
@@ -28,6 +30,14 @@ namespace exsF
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+		}
+		public Cadastro(Valores v2)
+		{
+			//
+			// The InitializeComponent() call is required for Windows Forms designer support.
+			//
+			InitializeComponent();
+			v1=v2;
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
@@ -41,11 +51,10 @@ namespace exsF
 		}
 		
 		}
-	
 //function
+			
 public void sms(){
 		MessageBox.Show("Cadastrado!");
-			Valores v1 	= new Valores();
 			//v1.Preco=Convert.ToSingle(label6.Text);
 			v1.Nome=nomeTXT.Text;
 			v1.Email=emailTXT.Text;
@@ -67,15 +76,30 @@ public void sms(){
 		//System.Diagnostics.Debug.WriteLine("salário de: "+String.Format("%.2f",v1.CalcularSalario(999,4)));
 		
 		
-		MainForm f1 = new MainForm();
-		//f1.setNome(v1);
-		f1.QuemSou(v1);
+		//MainForm f1 = new MainForm(v1);
 		MessageBox.Show(v1.Nome);
+		//this.Close();
 		this.Hide();
-				f1.Show();
-
+		new MainForm(v1).OperationWinwdow(this,"retomar");
+		GravandoNoArquivo();
+		//f1.Show();
+		//f1.OperationWinwdow(new Cadastro(),"fechar");
+		
 }
+
+
+		public void GravandoNoArquivo(){
+	string pathf=@"e:\db.csv";
+	if(!File.Exists(pathf)){
+		File.Create(pathf);
+	//	File.WriteAllText(pathf,"Nome;Telefone;\r\n");
+	}
+			File.AppendAllText(pathf,v1.Nome+";"+v1.Phone+"\r\n");
+		
+		}
+
 //end function
+
 		void PrecoTXTKeyPress(object sender, KeyPressEventArgs e)
 		{
 		 if (e.KeyChar == (char)13)
@@ -96,8 +120,13 @@ public void sms(){
 		void CadastroFormClosing(object sender, FormClosingEventArgs e)
 		{
 		//this.Close();
-			new MainForm().Show();
+		//	new MainForm().Show();
 		
+		}
+		void CadastroFormClosed(object sender, FormClosedEventArgs e){
+
+		//	new MainForm().OperationWinwdow(new MainForm(),"retomar");
+		//	new MainForm().OperationWinwdow(new MainForm(),"fechar");
 		}
 	}//fim classe
 }//fim namesspace
