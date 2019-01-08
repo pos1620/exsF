@@ -18,16 +18,16 @@ namespace exsF
 	/// </summary>
 	public partial class Consultar : Form
 	{
-		Valores v2 = new Valores();
+		Valores v3 = new Valores();
 			
 		public Consultar()
 		{
 			InitializeComponent();
 		}
-		public Consultar(Valores v1)
+		public Consultar(Valores v2)
 		{
 			InitializeComponent();
-			v2=v1;
+			v3=v2;
 		}
 		void ConsultarLoad(object sender, EventArgs e)
 		{
@@ -36,7 +36,7 @@ namespace exsF
 		void Button1Click(object sender, EventArgs e)
 		{
 			nomeLABEL.Text="Nome="+new Valores().Engineer;
-			MessageBox.Show("welcome "+v2.Nome);
+			MessageBox.Show("welcome "+v3.Nome);
 		}
 		void ConsultarFormClosing(object sender, FormClosingEventArgs e)
 		{
@@ -51,6 +51,10 @@ namespace exsF
 		//	MainForm m = new MainForm();
 		//	m.OperationWinwdow(m,"retomar");
 		
+		}
+		void ProdutoComboboxSelectedIndexChanged(object sender, EventArgs e)
+		{
+			MessageBox.Show(v3.TipoProduto);
 		}
 	}
 }//

@@ -49,7 +49,7 @@ namespace exsF
 		{
 
 	var cad=new Cadastro(v2);
-	cad.resLABEL.Text="Desenvolvido por "+new Valores().Engineer;
+	cad.resLABEL.Text="Desenvolvido por "+v2.Engineer;
 	cad.precoTXT.Text="0";
 	cad.Show();
 	//cad.ShowDialog();
@@ -69,7 +69,11 @@ namespace exsF
 		void ConsultarToolStripMenuItemClick(object sender, EventArgs e)
 		{
 	
-		new Consultar(v2).Show();;
+			Consultar cons = new Consultar(v2);
+			//cons.ProdutoCombobox.Text=v2.TipoProduto;
+			cons.ProdutoCombobox.Items.Add(v2.TipoProduto);
+			cons.Show();
+		
 		//this.Hide();
 		//this.Close();
 		}

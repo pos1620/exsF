@@ -15,7 +15,7 @@ namespace exsF
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.ComboBox ProdutoCombobox;
+		public System.Windows.Forms.ComboBox ProdutoCombobox;
 		private System.Windows.Forms.Label nomeLABEL;
 		private System.Windows.Forms.Label phoneLABEL;
 		private System.Windows.Forms.Label produtoLABEL;
@@ -75,6 +75,7 @@ namespace exsF
 			this.ProdutoCombobox.Size = new System.Drawing.Size(121, 21);
 			this.ProdutoCombobox.TabIndex = 1;
 			this.ProdutoCombobox.Text = "Produto";
+			this.ProdutoCombobox.SelectedIndexChanged += new System.EventHandler(this.ProdutoComboboxSelectedIndexChanged);
 			// 
 			// nomeLABEL
 			// 

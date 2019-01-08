@@ -64,8 +64,7 @@ public void sms(){
 			v1.Preco=float.Parse(precoTXT.Text);
 			
 			
-			//resLABEL.Text=v1.CalcularPrecoServico().ToString("f2");
-			valorLABEL.Text="valor="+v1.CalcularPrecoServico().ToString("f2");
+			valorLABEL.Text="valor="+v1.Preco.ToString("f2");//valorLABEL.Text="valor="+v1.CalcularPrecoServico().ToString("f2");
 
 
 //		v1.HorasT=4;
@@ -75,27 +74,26 @@ public void sms(){
 		//MessageBox.Show("salário de: "+string.Format("%2f",v1.CalcularSalario(999,4)));
 		//System.Diagnostics.Debug.WriteLine("salário de: "+String.Format("%.2f",v1.CalcularSalario(999,4)));
 		
-		
-		//MainForm f1 = new MainForm(v1);
-		MessageBox.Show(v1.Nome);
-		//this.Close();
-		this.Hide();
-		new MainForm(v1).OperationWinwdow(this,"retomar");
-		GravandoNoArquivo();
-		//f1.Show();
-		//f1.OperationWinwdow(new Cadastro(),"fechar");
-		
+		nomeTXT.Clear();
+		emailTXT.Clear();
+		phoneTXT.Clear();
+		urlTXT.Clear();
+		tipoTXT.Clear();
+		precoTXT.Clear();
+		//this.Hide();
+		//new MainForm(v1).OperationWinwdow(this,"retomar");
+		//new MainForm(v1).OperationWinwdow(this,"retomar");
+//		GravandoNoArquivo();
 }
-
 
 		public void GravandoNoArquivo(){
 	string pathf=@"e:\db.csv";
-	if(!File.Exists(pathf)){
-		File.Create(pathf);
-	//	File.WriteAllText(pathf,"Nome;Telefone;\r\n");
+	long len2=File.ReadAllBytes(pathf).Length;
+	if(File.Exists(pathf)&& len2==0){
+	File.WriteAllText(pathf,"Nome;Email;Telefone;Url;Tipo;Preço\r\n");
 	}
-			File.AppendAllText(pathf,v1.Nome+";"+v1.Phone+"\r\n");
-		
+		File.AppendAllText(pathf,v1.Nome+";"+v1.Email+";"+v1.Phone+";"+v1.Url+";"+v1.TipoProduto+";"+v1.Preco+"\r\n");
+	
 		}
 
 //end function
