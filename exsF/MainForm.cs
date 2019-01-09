@@ -10,7 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using exsF.mthds;
+using exsF.classes;
+using System.Diagnostics;
 namespace exsF
 {
 	/// <summary>
@@ -18,21 +19,28 @@ namespace exsF
 	/// </summary>
 	public partial class MainForm : Form
 	{
-			Valores v2= new Valores();
+			vendedor v= new vendedor();
+			produto prod= new produto();
 			
 		public MainForm()
 		{
 			InitializeComponent();
 			
 		}
-		public MainForm(Valores v1)
+		public MainForm(vendedor v2)
 		{
 			InitializeComponent();
-			v2=v1;
+			v=v2;
 		
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
+			MessageBox.Show(new vendedor().QuemSouEu());
+			MessageBox.Show(new produto().QuemSouEu());
+			MessageBox.Show(new TratamentoErro().QuemSouEu());
+			MessageBox.Show(new Valores().QuemSouEu());
+			MessageBox.Show(this.GetType().Name);
+		
 		}
 		void TextBox3KeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -48,14 +56,10 @@ namespace exsF
 		void CadastrarToolStripMenuItemClick(object sender, EventArgs e)
 		{
 
-	var cad=new Cadastro(v2);
-	cad.resLABEL.Text="Desenvolvido por "+v2.Engineer;
+	var cad=new Cadastro(v,prod);
+	cad.resLABEL.Text="Desenvolvido por "+v.Engineer;
 	cad.precoTXT.Text="0";
 	cad.Show();
-	//cad.ShowDialog();
-	//this.Hide();
- //if(this.IsDisposed)
-        //cad.Close();							
 		}
 		
 		void SobreToolStripMenuItemClick(object sender, EventArgs e)
@@ -69,9 +73,9 @@ namespace exsF
 		void ConsultarToolStripMenuItemClick(object sender, EventArgs e)
 		{
 	
-			Consultar cons = new Consultar(v2);
+			Consultar cons = new Consultar(v,prod);
 			//cons.ProdutoCombobox.Text=v2.TipoProduto;
-			cons.ProdutoCombobox.Items.Add(v2.TipoProduto);
+			cons.ProdutoCombobox.Items.Add(v);
 			cons.Show();
 		
 		//this.Hide();
@@ -112,6 +116,11 @@ namespace exsF
 		void MainFormFormClosed(object sender, FormClosedEventArgs e)
 		{
 			Application.Exit();
+		}
+		void ÃToolStripMenuItemClick(object sender, EventArgs e)
+		{
+	
+				Process.Start(@"https://github.com/pos1620/exsF");
 		}
 		
 		

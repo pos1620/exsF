@@ -19,6 +19,10 @@ namespace exsF
 		private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem desenvolvimentoToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem doaçToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem ãToolStripMenuItem;
+		private System.Windows.Forms.Button button1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -46,6 +50,10 @@ namespace exsF
 			this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.desenvolvimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.doaçToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.ãToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.button1 = new System.Windows.Forms.Button();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -63,7 +71,8 @@ namespace exsF
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.cadastrarToolStripMenuItem,
 			this.consultarToolStripMenuItem,
-			this.sobreToolStripMenuItem});
+			this.sobreToolStripMenuItem,
+			this.desenvolvimentoToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(712, 24);
@@ -91,11 +100,44 @@ namespace exsF
 			this.sobreToolStripMenuItem.Text = "Sobre";
 			this.sobreToolStripMenuItem.Click += new System.EventHandler(this.SobreToolStripMenuItemClick);
 			// 
+			// desenvolvimentoToolStripMenuItem
+			// 
+			this.desenvolvimentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.doaçToolStripMenuItem,
+			this.ãToolStripMenuItem});
+			this.desenvolvimentoToolStripMenuItem.Name = "desenvolvimentoToolStripMenuItem";
+			this.desenvolvimentoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+			this.desenvolvimentoToolStripMenuItem.Text = "Desenvolvimento";
+			// 
+			// doaçToolStripMenuItem
+			// 
+			this.doaçToolStripMenuItem.Name = "doaçToolStripMenuItem";
+			this.doaçToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+			this.doaçToolStripMenuItem.Text = "Docao";
+			// 
+			// ãToolStripMenuItem
+			// 
+			this.ãToolStripMenuItem.Name = "ãToolStripMenuItem";
+			this.ãToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+			this.ãToolStripMenuItem.Text = "Github";
+			this.ãToolStripMenuItem.Click += new System.EventHandler(this.ÃToolStripMenuItemClick);
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(268, 185);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 2;
+			this.button1.Text = "QuemSouEu";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(712, 273);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;

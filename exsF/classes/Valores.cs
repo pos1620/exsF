@@ -7,13 +7,25 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-namespace exsF.mthds
+namespace exsF.classes
 {
 	/// <summary>
 	/// Description of Valores.
 	/// </summary>
 	public class Valores
 	{
+		
+		
+		public string QuemSouEu(){
+			return this.GetType().Name;
+		}
+		
+		public Object QuemSouEu2(){
+			return this.GetType();
+		}
+		
+		
+		public Valores[] objts;
 		public Valores()
 		{
 		}
@@ -89,7 +101,12 @@ namespace exsF.mthds
 		return HorasT*SalarioHora;
 	}
 	
-	
-	
+	public void objtss(Valores obj){
+		//for(byte i=0;i<=objts.Length;i++)
+		//	if(objts[i]==null)
+		//	objts[i] = obj;
+			objts[0] = obj;
+	}
+			
 	}//fim classe
 }//fim namespace

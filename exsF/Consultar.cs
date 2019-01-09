@@ -9,7 +9,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using exsF.mthds;
+using exsF.classes;
 
 namespace exsF
 {
@@ -18,20 +18,32 @@ namespace exsF
 	/// </summary>
 	public partial class Consultar : Form
 	{
-		Valores v3 = new Valores();
-			
+		vendedor v3 = new vendedor();
+		produto prod3 = new produto();
 		public Consultar()
 		{
 			InitializeComponent();
 		}
-		public Consultar(Valores v2)
+		public void preencher(vendedor v,produto prod){
+			nomeLABEL.Text="Nome="+v.Nome;
+			phoneLABEL.Text="Telefone="+v.Phone;
+			produtoLABEL.Text="Produto="+prod.TipoProduto;
+			emailLABEL.Text="Email="+v.Email;
+			precoLABEL.Text="Preco="+v.Preco.ToString("f2");
+			urlLABEL.Text="Url="+v.Url;
+		}
+		public Consultar(vendedor v,produto prod)
 		{
 			InitializeComponent();
-			v3=v2;
+			v3=v;
+			prod3=prod;
+			preencher(v,prod);
 		}
 		void ConsultarLoad(object sender, EventArgs e)
 		{
-	
+		//	ProdutoCombobox.DataSource=v3.engineer;
+			dataGridViewDb.DataSource=v3.Engineer;
+		
 		}
 		void Button1Click(object sender, EventArgs e)
 		{

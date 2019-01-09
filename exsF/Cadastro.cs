@@ -9,8 +9,10 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using exsF.mthds;
+using exsF.classes;
 using System.IO;
+using System.Configuration;
+
 namespace exsF
 {
 	/// <summary>
@@ -18,8 +20,8 @@ namespace exsF
 	/// </summary>
 	public partial class Cadastro : Form
 	{
-Valores v1 	= new Valores();
-		
+vendedor v2 	= new vendedor();
+produto prod2 = new produto();
 		public Cadastro()
 		{
 			//
@@ -31,13 +33,14 @@ Valores v1 	= new Valores();
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		public Cadastro(Valores v2)
+		public Cadastro(vendedor v,produto prod)
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			v1=v2;
+			v2=v;
+			prod2=prod;
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
@@ -54,46 +57,52 @@ Valores v1 	= new Valores();
 //function
 			
 public void sms(){
+
 		MessageBox.Show("Cadastrado!");
 			//v1.Preco=Convert.ToSingle(label6.Text);
-			v1.Nome=nomeTXT.Text;
-			v1.Email=emailTXT.Text;
-			v1.Phone=phoneTXT.Text;
-			v1.Url=urlTXT.Text;
-			v1.TipoProduto=tipoTXT.Text;
-			v1.Preco=float.Parse(precoTXT.Text);
-			
-			
-			valorLABEL.Text="valor="+v1.Preco.ToString("f2");//valorLABEL.Text="valor="+v1.CalcularPrecoServico().ToString("f2");
+			v2.Nome=nomeTXT.Text;
+			v2.Email=emailTXT.Text;
+			v2.Phone=phoneTXT.Text;
+			v2.Url=urlTXT.Text;
+			prod2.TipoProduto=tipoTXT.Text;
+			try{
+			v2.Preco=float.Parse(precoTXT.Text);
+					nomeTXT.Clear();
+			emailTXT.Clear();
+			phoneTXT.Clear();
+			urlTXT.Clear();
+			tipoTXT.Clear();
+			precoTXT.Clear();
+			}
+			catch{
+				MessageBox.Show("Apenas numeros!");
+				precoTXT.Clear();
+				precoTXT.Focus();
+			}
 
+				valorLABEL.Text="valor="+v2.Preco.ToString("f2");//valorLABEL.Text="valor="+v1.CalcularPrecoServico().ToString("f2");
 
-//		v1.HorasT=4;
-	//		v1.salarioHora=111;
-	//MessageBox.Show("salario de:"+v1.CalcularSalario().ToString("c2"));
-		//MessageBox.Show("salário de: "+string.Format("{0:n}",v1.CalcularSalario(999,4)));
-		//MessageBox.Show("salário de: "+string.Format("%2f",v1.CalcularSalario(999,4)));
-		//System.Diagnostics.Debug.WriteLine("salário de: "+String.Format("%.2f",v1.CalcularSalario(999,4)));
 		
-		nomeTXT.Clear();
-		emailTXT.Clear();
-		phoneTXT.Clear();
-		urlTXT.Clear();
-		tipoTXT.Clear();
-		precoTXT.Clear();
 		//this.Hide();
 		//new MainForm(v1).OperationWinwdow(this,"retomar");
 		//new MainForm(v1).OperationWinwdow(this,"retomar");
-//		GravandoNoArquivo();
+		//GravandoNoArquivo();
+		//v1.objtss(v1);
+		//MessageBox.Show(Valores.objts);
+	
+	
+			
 }
 
 		public void GravandoNoArquivo(){
-	string pathf=@"e:\db.csv";
+	string pathf=ConfigurationManager.AppSettings["pathf"];
 	long len2=File.ReadAllBytes(pathf).Length;
-	if(File.Exists(pathf)&& len2==0){
-	File.WriteAllText(pathf,"Nome;Email;Telefone;Url;Tipo;Preço\r\n");
-	}
-		File.AppendAllText(pathf,v1.Nome+";"+v1.Email+";"+v1.Phone+";"+v1.Url+";"+v1.TipoProduto+";"+v1.Preco+"\r\n");
+	if(File.Exists(pathf)&& len2==0 ){
+File.WriteAllText(pathf,"Nome;Email;Telefone;Url;Tipo;Preço\r\n");
 	
+	}
+File.AppendAllText(pathf,v2.Nome+";"+v2.Email+";"+v2.Phone+";"+v2.Url+";"+v2.TipoProduto+";"+v2.Preco+"\r\n");
+
 		}
 
 //end function

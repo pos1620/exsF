@@ -21,6 +21,8 @@ namespace exsF
 		private System.Windows.Forms.Label produtoLABEL;
 		private System.Windows.Forms.Label emailLABEL;
 		private System.Windows.Forms.Label precoLABEL;
+		private System.Windows.Forms.DataGridView dataGridViewDb;
+		private System.Windows.Forms.Label urlLABEL;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -50,6 +52,9 @@ namespace exsF
 			this.produtoLABEL = new System.Windows.Forms.Label();
 			this.emailLABEL = new System.Windows.Forms.Label();
 			this.precoLABEL = new System.Windows.Forms.Label();
+			this.dataGridViewDb = new System.Windows.Forms.DataGridView();
+			this.urlLABEL = new System.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewDb)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -87,7 +92,7 @@ namespace exsF
 			// 
 			// phoneLABEL
 			// 
-			this.phoneLABEL.Location = new System.Drawing.Point(22, 133);
+			this.phoneLABEL.Location = new System.Drawing.Point(22, 156);
 			this.phoneLABEL.Name = "phoneLABEL";
 			this.phoneLABEL.Size = new System.Drawing.Size(100, 23);
 			this.phoneLABEL.TabIndex = 3;
@@ -95,7 +100,7 @@ namespace exsF
 			// 
 			// produtoLABEL
 			// 
-			this.produtoLABEL.Location = new System.Drawing.Point(22, 156);
+			this.produtoLABEL.Location = new System.Drawing.Point(22, 202);
 			this.produtoLABEL.Name = "produtoLABEL";
 			this.produtoLABEL.Size = new System.Drawing.Size(100, 23);
 			this.produtoLABEL.TabIndex = 4;
@@ -103,7 +108,7 @@ namespace exsF
 			// 
 			// emailLABEL
 			// 
-			this.emailLABEL.Location = new System.Drawing.Point(22, 179);
+			this.emailLABEL.Location = new System.Drawing.Point(22, 133);
 			this.emailLABEL.Name = "emailLABEL";
 			this.emailLABEL.Size = new System.Drawing.Size(100, 23);
 			this.emailLABEL.TabIndex = 5;
@@ -111,17 +116,35 @@ namespace exsF
 			// 
 			// precoLABEL
 			// 
-			this.precoLABEL.Location = new System.Drawing.Point(22, 202);
+			this.precoLABEL.Location = new System.Drawing.Point(22, 225);
 			this.precoLABEL.Name = "precoLABEL";
 			this.precoLABEL.Size = new System.Drawing.Size(100, 23);
 			this.precoLABEL.TabIndex = 6;
 			this.precoLABEL.Text = "Preço";
+			// 
+			// dataGridViewDb
+			// 
+			this.dataGridViewDb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridViewDb.Location = new System.Drawing.Point(431, 83);
+			this.dataGridViewDb.Name = "dataGridViewDb";
+			this.dataGridViewDb.Size = new System.Drawing.Size(193, 150);
+			this.dataGridViewDb.TabIndex = 7;
+			// 
+			// urlLABEL
+			// 
+			this.urlLABEL.Location = new System.Drawing.Point(22, 179);
+			this.urlLABEL.Name = "urlLABEL";
+			this.urlLABEL.Size = new System.Drawing.Size(100, 23);
+			this.urlLABEL.TabIndex = 8;
+			this.urlLABEL.Text = "Url";
 			// 
 			// Consultar
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(636, 273);
+			this.Controls.Add(this.urlLABEL);
+			this.Controls.Add(this.dataGridViewDb);
 			this.Controls.Add(this.precoLABEL);
 			this.Controls.Add(this.emailLABEL);
 			this.Controls.Add(this.produtoLABEL);
@@ -133,6 +156,7 @@ namespace exsF
 			this.Text = "Consultar";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConsultarFormClosed);
 			this.Load += new System.EventHandler(this.ConsultarLoad);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewDb)).EndInit();
 			this.ResumeLayout(false);
 
 		}
