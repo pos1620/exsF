@@ -12,6 +12,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using exsF.classes;
 using System.Diagnostics;
+using System.Threading;
 namespace exsF
 {
 	/// <summary>
@@ -21,6 +22,7 @@ namespace exsF
 	{
 			vendedor v= new vendedor();
 			produto prod= new produto();
+			//Consultar cons2 = new Consultar();
 			
 		public MainForm()
 		{
@@ -35,12 +37,8 @@ namespace exsF
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
-			MessageBox.Show(new vendedor().QuemSouEu());
-			MessageBox.Show(new produto().QuemSouEu());
-			MessageBox.Show(new TratamentoErro().QuemSouEu());
-			MessageBox.Show(new Valores().QuemSouEu());
-			MessageBox.Show(this.GetType().Name);
-		
+			
+			new TratamentoErro().OperationWindowList();
 		}
 		void TextBox3KeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -59,7 +57,10 @@ namespace exsF
 	var cad=new Cadastro(v,prod);
 	cad.resLABEL.Text="Desenvolvido por "+v.Engineer;
 	cad.precoTXT.Text="0";
-	cad.Show();
+	cad.Show();	
+//	this.Hide();
+//	this.Close();
+
 		}
 		
 		void SobreToolStripMenuItemClick(object sender, EventArgs e)
@@ -77,6 +78,7 @@ namespace exsF
 			//cons.ProdutoCombobox.Text=v2.TipoProduto;
 			cons.ProdutoCombobox.Items.Add(v);
 			cons.Show();
+			
 		
 		//this.Hide();
 		//this.Close();
@@ -88,30 +90,6 @@ namespace exsF
 		
 		}
 		
-		
-				
-		
-		public void OperationWinwdow(Object ob,string op){
-			if(Application.OpenForms.Count==0){
-				Application.Exit();
-			}
-			else{
-				foreach(Form formA in Application.OpenForms)
-					if(formA is Object && op.Equals("retomar")){
-						formA.Show();
-						//formA.Hide();
-						//new MainForm(ob2).Show();
-						//formA.Close();
-				break;
-				}
-				else if(formA is Object && op.Equals("fechar")){
-						formA.Close();
-				break;
-				
-				}
-				
-			}
-		}
 		
 		void MainFormFormClosed(object sender, FormClosedEventArgs e)
 		{

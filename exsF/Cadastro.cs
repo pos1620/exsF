@@ -80,20 +80,14 @@ public void sms(){
 				precoTXT.Focus();
 			}
 
-				valorLABEL.Text="valor="+v2.Preco.ToString("f2");//valorLABEL.Text="valor="+v1.CalcularPrecoServico().ToString("f2");
+				valorLABEL.Text="valor="+v2.Preco.ToString("f2");
+//		new TratamentoErro().OperationWindow2(new MainForm(),"retomar");
+				
+		new TratamentoErro().OperationWindow2(new Consultar(),"retomar");
 
-		
-		//this.Hide();
-		//new MainForm(v1).OperationWinwdow(this,"retomar");
-		//new MainForm(v1).OperationWinwdow(this,"retomar");
-		//GravandoNoArquivo();
-		//v1.objtss(v1);
-		//MessageBox.Show(Valores.objts);
-	
-	
-			
 }
 
+//Gravando arquivo in db.csv
 		public void GravandoNoArquivo(){
 	string pathf=ConfigurationManager.AppSettings["pathf"];
 	long len2=File.ReadAllBytes(pathf).Length;
@@ -103,9 +97,7 @@ File.WriteAllText(pathf,"Nome;Email;Telefone;Url;Tipo;Preço\r\n");
 	}
 File.AppendAllText(pathf,v2.Nome+";"+v2.Email+";"+v2.Phone+";"+v2.Url+";"+v2.TipoProduto+";"+v2.Preco+"\r\n");
 
-		}
-
-//end function
+		}//fim GravandoNoArquivo()
 
 		void PrecoTXTKeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -121,8 +113,7 @@ File.AppendAllText(pathf,v2.Nome+";"+v2.Email+";"+v2.Phone+";"+v2.Url+";"+v2.Tip
 }
 		void CadastroLoad(object sender, EventArgs e)
 		{
-			
-	
+		
 		}
 		void CadastroFormClosing(object sender, FormClosingEventArgs e)
 		{
