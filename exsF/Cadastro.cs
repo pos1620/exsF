@@ -57,35 +57,45 @@ public Cadastro()
 //function
 			
 public void sms(){
-
-		MessageBox.Show("Cadastrado!");
-			//v1.Preco=Convert.ToSingle(label6.Text);
+	if(string.IsNullOrEmpty(nomeTXT.Text)||
+	   string.IsNullOrEmpty(emailTXT.Text)||
+	   string.IsNullOrEmpty(phoneTXT.Text)||
+	   string.IsNullOrEmpty(urlTXT.Text)||
+	   string.IsNullOrEmpty(tipoTXT.Text)||
+	   string.IsNullOrEmpty(precoTXT.Text)){
+		MessageBox.Show("todos os valores obrigatorios");
+	
+	}
+		
+		else{
+		try{
+			v2.Preco=float.Parse(precoTXT.Text);
 			v2.Nome=nomeTXT.Text;
 			v2.Email=emailTXT.Text;
 			v2.Phone=phoneTXT.Text;
 			v2.Url=urlTXT.Text;
-			prod2.TipoProduto=tipoTXT.Text;
-			try{
-			v2.Preco=float.Parse(precoTXT.Text);
-					nomeTXT.Clear();
+			prod2.TipoProduto=tipoTXT.Text;	
+			nomeTXT.Clear();
 			emailTXT.Clear();
 			phoneTXT.Clear();
 			urlTXT.Clear();
 			tipoTXT.Clear();
 			precoTXT.Clear();
+			valorLABEL.Text="valor="+v2.Preco.ToString("f2");
+			MessageBox.Show("Cadastrado!");
+}catch{
+			precoTXT.Clear();
+			precoTXT.Focus();
+			MessageBox.Show("Apenas numeros!");
 			}
-			catch{
-				MessageBox.Show("Apenas numeros!");
-				precoTXT.Clear();
-				precoTXT.Focus();
-			}
-
-				valorLABEL.Text="valor="+v2.Preco.ToString("f2");
-//		new TratamentoErro().OperationWindow2(new MainForm(),"retomar");
+		
 				
-				new TratamentoErro().OperationWindow(new Consultar(),"retomar");
+//				new TratamentoErro().OperationWindow(new Consultar(),"retomar");
 //		new TratamentoErro().OperationWindowList(new Consultar());
+//GravandoNoArquivo()
 
+	}
+		
 }
 
 //Gravando arquivo in db.csv

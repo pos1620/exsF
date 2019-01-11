@@ -15,31 +15,15 @@ namespace exsF.classes
 	/// <summary>
 	/// Description of TratamentErro.
 	/// </summary>
-	public class TratamentoErro : Exception
+	public class TratamentoErro:Valores
 	{
 		public TratamentoErro()
 		{
 		}
 		
-		public string QuemSouEu(){
-			return this.GetType().Name;
-		}
 		
-		public void Testando(string text,Valores v1){
-			Valores v4 = v1;
-			try{
-				
-			}
-			catch{
-				System.Windows.Forms.MessageBox.Show("Apenas numeros!");
-				//precoTXT.Clear();
-				//precoTXT.Focus();
-			
-			}
-		}
-		
-		
-		/*method returns operation that user allow
+		/*
+ 		 * method returns operation that user allow
 		 * object plus option does the action to window
 		 *return window or close window on actual object 
 		*/
@@ -76,9 +60,9 @@ namespace exsF.classes
 			}
 			else{
 				foreach(Form formA in Application.OpenForms)
-				MessageBox.Show("formA.GetType().Name->"+formA.GetType().Name+ 
+					MessageBox.Show("formA.GetType().Name->"+formA.GetType().Name+
 					             "\nformA.GetType()->"+formA.GetType()+
-					            "\nob.getType()->"+ob.GetType());
+					             "\nob.getType()->"+ob.GetType()+"\nquantidade de form aberto->"+Application.OpenForms.Count+"\nquantidade de form aberto->"+Application.OpenForms[1]);
 			
 }
 
@@ -87,7 +71,7 @@ namespace exsF.classes
 		
 		 public Object retornando(Object o){
         return o;
-}
+}//fim classe retornando
 		
 		
 		

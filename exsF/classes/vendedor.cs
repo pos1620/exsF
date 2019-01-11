@@ -18,5 +18,6 @@ namespace exsF.classes
 		public vendedor()
 		{
 		}
-	}
+		
+		}	
 }

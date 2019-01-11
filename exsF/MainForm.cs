@@ -22,6 +22,7 @@ namespace exsF
 	{
 			vendedor v= new vendedor();
 			produto prod= new produto();
+			//Consultar cons2 = new Consultar();
 		public MainForm()
 		{
 			InitializeComponent();
@@ -73,11 +74,10 @@ namespace exsF
 		{
 	
 			Consultar cons = new Consultar(v,prod);
-			//cons.ProdutoCombobox.Text=v2.TipoProduto;
 			cons.ProdutoCombobox.Items.Add(v);
 			cons.Show();
-			
 		
+		//cons2.Show();
 		//this.Hide();
 		//this.Close();
 		}
