@@ -83,7 +83,8 @@ public void sms(){
 				valorLABEL.Text="valor="+v2.Preco.ToString("f2");
 //		new TratamentoErro().OperationWindow2(new MainForm(),"retomar");
 				
-		new TratamentoErro().OperationWindow2(new Consultar(),"retomar");
+		new TratamentoErro().OperationWindow(new MainForm(),"retomar");
+//		new TratamentoErro().OperationWindowList(new Consultar());
 
 }
 

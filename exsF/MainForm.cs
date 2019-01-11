@@ -38,7 +38,7 @@ namespace exsF
 		void Button1Click(object sender, EventArgs e)
 		{
 			
-			new TratamentoErro().OperationWindowList();
+			new TratamentoErro().OperationWindowList(new Cadastro());
 		}
 		void TextBox3KeyPress(object sender, KeyPressEventArgs e)
 		{
