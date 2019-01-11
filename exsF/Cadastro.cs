@@ -22,7 +22,7 @@ namespace exsF
 	{
 vendedor v2 	= new vendedor();
 produto prod2 = new produto();
-		public Cadastro()
+public Cadastro()
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
@@ -83,7 +83,7 @@ public void sms(){
 				valorLABEL.Text="valor="+v2.Preco.ToString("f2");
 //		new TratamentoErro().OperationWindow2(new MainForm(),"retomar");
 				
-		new TratamentoErro().OperationWindow(new Consultar(),"retomar");
+				new TratamentoErro().OperationWindow(new Consultar(),"retomar");
 //		new TratamentoErro().OperationWindowList(new Consultar());
 
 }

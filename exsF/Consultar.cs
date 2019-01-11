@@ -18,6 +18,7 @@ namespace exsF
 	/// </summary>
 	public partial class Consultar : Form
 	{
+		
 		vendedor v3 = new vendedor();
 		produto prod3 = new produto();
 		public Consultar()
@@ -39,6 +40,7 @@ namespace exsF
 			prod3=prod;
 			preencher(v,prod);
 		}
+		
 		void ConsultarLoad(object sender, EventArgs e)
 		{
 		//	ProdutoCombobox.DataSource=v3.engineer;

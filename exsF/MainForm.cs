@@ -22,8 +22,6 @@ namespace exsF
 	{
 			vendedor v= new vendedor();
 			produto prod= new produto();
-			//Consultar cons2 = new Consultar();
-			
 		public MainForm()
 		{
 			InitializeComponent();
