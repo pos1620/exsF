@@ -39,6 +39,7 @@ namespace exsF.classes
 				switch(op){
 					case "retomar":
 						formA.Focus();
+						formA.Show();
 							break;
 					case "fechar":
 						formA.Close();

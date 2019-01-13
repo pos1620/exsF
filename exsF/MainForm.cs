@@ -37,7 +37,7 @@ namespace exsF
 		void Button1Click(object sender, EventArgs e)
 		{
 			
-			new TratamentoErro().OperationWindowList(new Cadastro());
+		//	new TratamentoErro().OperationWindowList(new Cadastro());
 		}
 		void TextBox3KeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -93,10 +93,16 @@ namespace exsF
 		{
 			Application.Exit();
 		}
+		
+		public string IrAOsIte(string site="https://github.com/pos1620/exsF"){
+		      		//site="https://facebook.com";
+		      		 	return site;
+		}
+	
 		void ÃToolStripMenuItemClick(object sender, EventArgs e)
 		{
 	
-				Process.Start(@"https://github.com/pos1620/exsF");
+			Process.Start(IrAOsIte());
 		}
 		
 		

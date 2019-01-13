@@ -1,0 +1,6 @@
+[master a55efd9] written by alxsy,signup test methos -
+ 10 files changed, 40 insertions(+), 41 deletions(-)
+ create mode 100644 TratamentoErro
+ rewrite exsF/bin/Debug/exsF.exe (77%)
+ rewrite exsF/obj/Debug/exsF.exe (77%)
+ create mode 100644 no.txt
