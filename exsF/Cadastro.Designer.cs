@@ -30,6 +30,7 @@ namespace exsF
 		private System.Windows.Forms.TextBox tipoTXT;
 		private System.Windows.Forms.Label precoLABEL;
 		public  System.Windows.Forms.TextBox precoTXT;
+		private System.Windows.Forms.MaskedTextBox maskedTextBox1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -52,6 +53,7 @@ namespace exsF
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
 			this.resLABEL = new System.Windows.Forms.Label();
 			this.valorLABEL = new System.Windows.Forms.Label();
 			this.phoneTXT = new System.Windows.Forms.TextBox();
@@ -68,6 +70,7 @@ namespace exsF
 			this.tipoTXT = new System.Windows.Forms.TextBox();
 			this.precoLABEL = new System.Windows.Forms.Label();
 			this.precoTXT = new System.Windows.Forms.TextBox();
+			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
 			this.SuspendLayout();
 			// 
 			// resLABEL
@@ -198,11 +201,20 @@ namespace exsF
 			this.precoTXT.Click += new System.EventHandler(this.PrecoTXTClick);
 			this.precoTXT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecoTXTKeyPress);
 			// 
+			// maskedTextBox1
+			// 
+			this.maskedTextBox1.Location = new System.Drawing.Point(405, 83);
+			this.maskedTextBox1.Mask = "+00(00)00000-0000";
+			this.maskedTextBox1.Name = "maskedTextBox1";
+			this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+			this.maskedTextBox1.TabIndex = 26;
+			// 
 			// Cadastro
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(583, 273);
+			this.Controls.Add(this.maskedTextBox1);
 			this.Controls.Add(this.precoTXT);
 			this.Controls.Add(this.precoLABEL);
 			this.Controls.Add(this.tipoTXT);
@@ -219,6 +231,7 @@ namespace exsF
 			this.Controls.Add(this.emailLABEL);
 			this.Controls.Add(this.nomeLABEL);
 			this.Controls.Add(this.label1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Cadastro";
 			this.Text = "Cadastro";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CadastroFormClosed);

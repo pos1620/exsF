@@ -10,6 +10,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using exsF.classes;
+//using System.Drawing.Icon;
 
 namespace exsF
 {
@@ -39,6 +40,7 @@ namespace exsF
 			v3=v;
 			prod3=prod;
 			preencher(v,prod);
+//this.Icon= new Icon(@"C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\bin\Debug\Icon.ico");
 		}
 		
 		void ConsultarLoad(object sender, EventArgs e)

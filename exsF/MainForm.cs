@@ -36,15 +36,24 @@ namespace exsF
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
-			
+		//	MessageBox.Show("tipo:"+saindo);
 		//	new TratamentoErro().OperationWindowList(new Cadastro());
 		}
 		void TextBox3KeyPress(object sender, KeyPressEventArgs e)
 		{
 		}
+		
+		public void saindo(object sender, EventArgs e){
+			Application.Exit();
+		}
+		
+		
 		void MainFormLoad(object sender, EventArgs e)
 		{
-	
+			
+			var ctx= new ContextMenu();
+ctx.MenuItems.Add(new MenuItem("sair",saindo));
+notifyIcon1.ContextMenu=ctx;
 		}
 		void ToolTip1Popup(object sender, PopupEventArgs e)
 		{
@@ -95,7 +104,7 @@ namespace exsF
 		}
 		
 		public string IrAOsIte(string site="https://github.com/pos1620/exsF"){
-		      		//site="https://facebook.com";
+		      		//site="select site from exs";
 		      		 	return site;
 		}
 	
@@ -103,6 +112,10 @@ namespace exsF
 		{
 	
 			Process.Start(IrAOsIte());
+		}
+		void ProgressoToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			new Progresso().Show();
 		}
 		
 		

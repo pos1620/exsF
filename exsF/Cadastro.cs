@@ -41,6 +41,7 @@ public Cadastro()
 			InitializeComponent();
 			v2=v;
 			prod2=prod;
+			
 		}
 		void Button1Click(object sender, EventArgs e)
 		{

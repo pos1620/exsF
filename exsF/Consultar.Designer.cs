@@ -45,6 +45,7 @@ namespace exsF
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultar));
 			this.button1 = new System.Windows.Forms.Button();
 			this.ProdutoCombobox = new System.Windows.Forms.ComboBox();
 			this.nomeLABEL = new System.Windows.Forms.Label();
@@ -125,7 +126,7 @@ namespace exsF
 			// dataGridViewDb
 			// 
 			this.dataGridViewDb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridViewDb.Location = new System.Drawing.Point(431, 83);
+			this.dataGridViewDb.Location = new System.Drawing.Point(431, 56);
 			this.dataGridViewDb.Name = "dataGridViewDb";
 			this.dataGridViewDb.Size = new System.Drawing.Size(193, 150);
 			this.dataGridViewDb.TabIndex = 7;
@@ -152,6 +153,7 @@ namespace exsF
 			this.Controls.Add(this.nomeLABEL);
 			this.Controls.Add(this.ProdutoCombobox);
 			this.Controls.Add(this.button1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Consultar";
 			this.Text = "Consultar";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConsultarFormClosed);

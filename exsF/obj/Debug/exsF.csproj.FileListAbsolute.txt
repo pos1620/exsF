@@ -9,3 +9,4 @@ C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.pdb
 C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.Cadastro.resources
 C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.Sobre.resources
 C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.Consultar.resources
+C:\Users\home\Documents\SharpDevelop Projects\exsF\exsF\obj\Debug\exsF.Progresso.resources
