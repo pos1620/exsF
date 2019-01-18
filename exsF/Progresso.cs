@@ -53,7 +53,7 @@ progressBar1.Maximum=linhas.Length;
 			for(var i=0;i<2;i++){
 				var linha = linhas[i];
 				progressBar1.Value=(i+1);
-				ImportedNames.Text=linha+"\n\r"+":Importado\r\n";
+				//ImportedNames.Text=linha+"\n\r"+":Importado\r\n";
 		
 }
 			

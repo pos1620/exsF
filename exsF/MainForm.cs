@@ -117,6 +117,10 @@ notifyIcon1.ContextMenu=ctx;
 		{
 			new Progresso().Show();
 		}
+		void GeralToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			new tabelaMenu().Show();
+		}
 		
 		
 		}//fim classe

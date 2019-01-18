@@ -25,6 +25,7 @@ namespace exsF
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.NotifyIcon notifyIcon1;
 		private System.Windows.Forms.ToolStripMenuItem progressoToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem geralToolStripMenuItem;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -57,9 +58,10 @@ namespace exsF
 			this.desenvolvimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.doaçToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ãToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.progressoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.button1 = new System.Windows.Forms.Button();
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-			this.progressoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.geralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -78,7 +80,8 @@ namespace exsF
 			this.cadastrarToolStripMenuItem,
 			this.consultarToolStripMenuItem,
 			this.sobreToolStripMenuItem,
-			this.desenvolvimentoToolStripMenuItem});
+			this.desenvolvimentoToolStripMenuItem,
+			this.geralToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(712, 24);
@@ -119,15 +122,22 @@ namespace exsF
 			// doaçToolStripMenuItem
 			// 
 			this.doaçToolStripMenuItem.Name = "doaçToolStripMenuItem";
-			this.doaçToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.doaçToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
 			this.doaçToolStripMenuItem.Text = "Docao";
 			// 
 			// ãToolStripMenuItem
 			// 
 			this.ãToolStripMenuItem.Name = "ãToolStripMenuItem";
-			this.ãToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.ãToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
 			this.ãToolStripMenuItem.Text = "Github";
 			this.ãToolStripMenuItem.Click += new System.EventHandler(this.ÃToolStripMenuItemClick);
+			// 
+			// progressoToolStripMenuItem
+			// 
+			this.progressoToolStripMenuItem.Name = "progressoToolStripMenuItem";
+			this.progressoToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+			this.progressoToolStripMenuItem.Text = "Progresso";
+			this.progressoToolStripMenuItem.Click += new System.EventHandler(this.ProgressoToolStripMenuItemClick);
 			// 
 			// button1
 			// 
@@ -145,12 +155,12 @@ namespace exsF
 			this.notifyIcon1.Text = "exs";
 			this.notifyIcon1.Visible = true;
 			// 
-			// progressoToolStripMenuItem
+			// geralToolStripMenuItem
 			// 
-			this.progressoToolStripMenuItem.Name = "progressoToolStripMenuItem";
-			this.progressoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.progressoToolStripMenuItem.Text = "Progresso";
-			this.progressoToolStripMenuItem.Click += new System.EventHandler(this.ProgressoToolStripMenuItemClick);
+			this.geralToolStripMenuItem.Name = "geralToolStripMenuItem";
+			this.geralToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+			this.geralToolStripMenuItem.Text = "geral";
+			this.geralToolStripMenuItem.Click += new System.EventHandler(this.GeralToolStripMenuItemClick);
 			// 
 			// MainForm
 			// 
